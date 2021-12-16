@@ -1,0 +1,55 @@
+\section{Příklad 3}
+% Jako parametr zadejte skupinu (A-H)
+\tretiZadani{G}
+
+%%% Krok 1
+\begin{center}
+    \textbf{Krok 1} - Prevedieme odpor na vodivosť
+\end{center}
+
+\begin{gather*}
+    G = \frac{1}{R}
+\end{gather*}
+
+%%% Krok 2
+\begin{center}
+    \textbf{Krok 2} - Vytvoríme si rovnice pre uzly
+\end{center}
+\begin{gather*}
+    A: I_{1} + G_{4} \times (U_{B} - U_{A}) - U_{A} \times G_{1} - G_{5} \times (U_{B} - U_{A}) = 0\\
+    B: I_{2} - G_{4} \times (U_{B} - U_{A}) - G_{3} \times (U_{B} - U_{C}) + G_{5} \times (U_{B} - U_{A}) = 0\\
+    C: G_{3} \times (U_{B} - U_{C}) - U_{C} \times G_{2} - I_{2} = 0\\
+\end{gather*}
+
+Rovnice prevedieme do matice a vypočítame ju:
+\begin{gather*}
+    \begin{pmatrix}
+        -G_{4} - G_{1} + G_{5} & G_{4} - G_{5} & 0 \\
+        G_{4} - G_{5} & -G_{4} - G_{3} + G_{5} & G_{3} \\
+        0 & G_{3} & -G_{3} - G_{2}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        U_{A} \\
+        U_{B} \\
+        U_{C}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -I_1 \\
+        -I_1 \\
+        I_2
+    \end{pmatrix}
+\end{gather*}
+
+Po vypočítaní zistíme, že:
+\begin{gather*}
+    U_B = 79,0103V \\
+    U_C = 24,0593V
+\end{gather*}
+
+Vypočítame $\boldsymbol{U_{R_3}}$ a taktiež $\boldsymbol{I_{R_3}}$:
+\begin{gather*}
+    \boldsymbol{U_{R_3}} = U_B - U_C = \textbf{54,9510V} \\
+    \boldsymbol{I_{R_4}} = \frac{U_{R_3}}{R_3} = \textbf{1,0368A}
+\end{gather*}

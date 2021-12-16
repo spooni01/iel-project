@@ -1,0 +1,86 @@
+\section{Příklad 5}
+% Jako parametr zadejte skupinu (A-H)
+\patyZadani{C}
+
+%%% Krok 1 
+\begin{center}
+\textbf{Krok 1} - Platí:
+\end{center}
+
+\begin{gather*}
+i = \frac{U_{R}}{R}\\
+U_{R} + U_{C} - U = 0\\
+U_{C}' = \frac{du_{c}}{dt}=\frac{i}{C}
+\end{gather*}
+
+\begin{center}
+Rovnice dosadíme:
+\end{center}
+
+\begin{gather*}
+U_{C}' = \frac{U_{R}}{R \times C}
+\end{gather*}
+
+%%% Krok 2
+\begin{center}
+\textbf{Krok 2} - Vyjadríme si $\lambda $
+\end{center}
+
+\begin{gather*}
+\lambda + \frac{1}{R \times C} = 0\\
+\lambda = -\frac{1}{R \times C}
+\end{gather*}
+
+\begin{center}
+Výsledok bude v tvare $U_{C}(t) = K(t) \times e^{\lambda \times t}$
+\end{center}
+
+%%% Krok 3
+\begin{center}
+\textbf{Krok 3}
+\end{center}
+
+\begin{gather*}
+U_{C}'(t) = K(t) \times e^{-\frac{t}{R \times C}} + (-\frac{1}{R \times C}) \times K(t) \times e^{-\frac{1}{R \times C}}
+\end{gather*}
+
+\begin{center}
+Rovnicu $U_{C} = \frac{U_{R}}{R \times C}$ si upravíme na tvar $U_{C}' + \frac{U_{C}}{R \times C} -  \frac{U}{R \times C} = 0$ a zintegrujeme ju:
+\end{center}
+
+\begin{gather*}
+K'(t) = U \times e^{\frac{t}{R \times C}} \times \frac{1}{R \times C}\\
+K(t) = U \times e^{\frac{t}{R \times C}} + Z\\
+\end{gather*}
+
+
+%%% Krok 4
+\begin{center}
+\textbf{Krok 4} - Dosadenie do vopred pripravenej rovnice
+\end{center}
+
+\begin{gather*}
+U_{C}(t) =(U \times e^{\frac{t}{R \times C}} + Z) \times e^{-\frac{t}{R \times C}}\\
+U_{C}(t) =U + Z \times e^{-\frac{t}{R \times C}}
+\end{gather*}
+
+\begin{center}
+Dosadíme $U_{C} = 12V$ a $t = 0s$ a vyjadríme $Z$:
+\end{center}
+
+\begin{gather*}
+Z = -33\\
+\boldsymbol{U_{C}(t) = 45 - 33 \times e^{-\frac{t}{150}}}\\
+\end{gather*}
+
+%%% Krok 5 
+\begin{center}
+\textbf{Krok 5} - Skúška výpočtu
+\end{center}
+
+\begin{gather*}
+U_{C}' + \frac{U_{C}}{R \times C} -  \frac{U}{R \times C} = 0\\
+U_{C}'(t) \times e^{-\frac{t}{R \times C}} + ( \frac{1}{R \times C}) \times K(t) \times e^{-\frac{t}{R \times C}} + \frac{K(t) \times e^{-\frac{t}{R \times C}}}{R \times C} - \frac{U}{R \times C} = 0\\
+\frac{U}{R \times C} - \frac{U}{R \times C} = 0\\
+0 = 0
+\end{gather*}
