@@ -1,3 +1,73 @@
 \section{Příklad 4}
 % Jako parametr zadejte skupinu (A-H)
 \ctvrtyZadani{G}
+
+%%% Krok 1
+\begin{center}
+    \textbf{Krok 1} - Zistíme uhlovú frekvenciu $\omega$
+\end{center}
+
+\begin{gather*}
+    \omega = 2 \times \pi \times f = 120\pi rad/s
+\end{gather*}
+
+%%% Krok 2
+\begin{center}
+    \textbf{Krok 2} - Zostavíme matice pre smyčky
+\end{center}
+
+\begin{gather*}
+    \begin{bmatrix} 
+	\omega \times L_{1} \times i - R_{1} + \frac{1}{\omega \times C_{2}} \times i & -R_{1} & \frac{1}{\omega \times C_{2}} \times i \\
+	R_{1} & \frac{1}{\omega \times C_{1}} + R_{1} & 0\\
+	\frac{1}{\omega \times C_{2}} \times i & 0 & \omega \times L_{2} \times i + R_{2} + \frac{1}{\omega \times C_{2}}\\
+	\end{bmatrix}
+    \times
+    \begin{bmatrix}
+    I_{A}\\
+    I_{B}\\
+    I_{C}\\
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    U_{1}\\
+    U_{2}\\
+    U_{2}\\
+    \end{bmatrix}
+	\quad
+\end{gather*}
+
+%%% Krok 3
+\begin{center}
+    \textbf{Krok 3} - Vypočítame determinanty
+
+    Po vyriešení matice vypočítame Cramerovým a Sarrusovým pravidlom determinanty:
+\end{center}
+
+\begin{gather*}
+    \triangle = -4.7944 + 5.7079i\\
+    \triangle_{3} = 5.2874 + 7.9107i\\
+    I_{C} = I_{L_{2}} = \frac{\triangle_{3}}{\triangle} = (-0.0089 - 0.0176i)A\\
+\end{gather*}
+
+
+%%% Krok 4
+\begin{center}
+    \textbf{Krok 4} - Dopočítame napätie $U_{L_{2}}$
+\end{center}
+
+\begin{gather*}
+    X_{L_{2}} = \omega \times L_{2} \times i = 22.6195i\omega\\
+    U_{L_{2}} = X_{L_{2}} \times I_{L_{2}} = (0.3973 - 0.2022i)V\\
+\end{gather*}
+
+
+%%% Krok 5
+\begin{center}
+    \textbf{Krok 5} - Vypočítame výsledok - $|U_{L_{2}}|$ a $\Phi_{L_{2}}$
+\end{center} 
+
+\begin{gather*}
+    \boldsymbol{|U_{L_{2}}|} = \sqrt{Re(U_{L_{2}})^{2} + Im(U_{L_{2}})^{2}}=\boldsymbol{0.4458V}\\
+    \boldsymbol{\Phi_{L_{2}}} = arctan(\frac{Im(U_{L_{2}})}{Re(U_{L_{2}}}) = \boldsymbol{-0.4707rad}\\
+\end{gather*}
