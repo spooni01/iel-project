@@ -6,9 +6,16 @@
 \begin{center}
     \textbf{Krok 1} - Prevedieme odpor na vodivosť
 \end{center}
-
 \begin{gather*}
-    G = \frac{1}{R}
+    G = \frac{1}{R}\\
+\end{gather*}
+\bigbreak
+\begin{gather*}
+    G_1 = \frac{1}{R_1}\\
+    G_2 = \frac{1}{R_2}\\
+    G_3 = \frac{1}{R_3}\\
+    G_4 = \frac{1}{R_4}\\
+    G_5 = \frac{1}{R_5}\\
 \end{gather*}
 
 %%% Krok 2
@@ -21,7 +28,42 @@
     C: G_{3} \times (U_{B} - U_{C}) - U_{C} \times G_{2} = I_{2}\\
 \end{gather*}
 
-Rovnice prevedieme do matice a vypočítame ju a zistíme, že:
+\newpage
+
+\begin{center}
+    \textbf{Krok 3} - Odvodíme si $I_{R_{5}}$:
+\end{center}
+\begin{gather*}
+I_{R_{5}} = \frac{U}{R_5};
+\end{gather*}
+
+\begin{center}
+    \textbf{Krok 4} - Rovnice prevedieme do matice a vypočítame ju:
+\end{center}
+\begin{gather*}
+    \begin{pmatrix}
+        -G_{5} - G_{1} + G_{4} & G_{5} + G_{4} & 0 \\
+        G_{5} + G_{4} & -G_{5} - G_{4} - G_{3} & G_{3} \\
+        0 & G_{3} & -G_{3} - G_{2}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        U_{A} \\
+        U_{B} \\
+        U_{C}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -I_1-I_{R_{5}} \\
+        -I_2+I_{R_{5}} \\
+        I_2
+    \end{pmatrix}
+\end{gather*}
+
+\begin{center}
+    \textbf{Krok 5} - Po vypočítaní zistíme, že:
+\end{center}
+
 \begin{gather*}
     U_A = 53.3124V\\
     U_B = -23.9928V \\
