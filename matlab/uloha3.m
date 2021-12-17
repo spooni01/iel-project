@@ -17,10 +17,10 @@ G4 = 1/R4;
 G5 = 1/R5;
 % matice
 syms UA UB UC
-IR5 = (U+UA-UB)/R5;
+IR5 = U/R5;
 
-matica_rovnic = [G4*(UB-UA)-UA*G1-IR5 == -I1,
-        -G4*(UB-UA)-G3*(UB-UC)+IR5 == -I2,
+matica_rovnic = [IR5-G5*(UA-UB)-UA*G1-G4*(UA-UB) == -I1,
+        -IR5+G5*(UA-UB)+G4*(UA-UB)-G3*(UB-UC) == -I2,
         G3*(UB-UC)-UC*G2 == I2];
 
 [matica_vodivosti,matica_prudy] = equationsToMatrix(matica_rovnic);
