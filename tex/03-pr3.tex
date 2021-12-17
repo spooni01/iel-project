@@ -18,9 +18,16 @@
     G_5 = \frac{1}{R_5}\\
 \end{gather*}
 
+\begin{center}
+    \textbf{Krok 2} - Odvodíme si $I_{R_{5}}$:
+\end{center}
+\begin{gather*}
+I_{R_{5}} = \frac{U}{R_5}
+\end{gather*}
+
 %%% Krok 2
 \begin{center}
-    \textbf{Krok 2} - Vytvoríme si rovnice pre uzly
+    \textbf{Krok 3} - Vytvoríme si rovnice pre uzly
 \end{center}
 \begin{gather*}
     A: I_{R_{5}} - G_{5} \times (U_{A} - U_{B}) - U_{A} \times G_{1} - G_{4} \times (U_{A} - U_{B}) = -I_{1}\\
@@ -29,13 +36,6 @@
 \end{gather*}
 
 \newpage
-
-\begin{center}
-    \textbf{Krok 3} - Odvodíme si $I_{R_{5}}$:
-\end{center}
-\begin{gather*}
-I_{R_{5}} = \frac{U}{R_5};
-\end{gather*}
 
 \begin{center}
     \textbf{Krok 4} - Rovnice prevedieme do matice a vypočítame ju:
@@ -61,16 +61,50 @@ I_{R_{5}} = \frac{U}{R_5};
 \end{gather*}
 
 \begin{center}
-    \textbf{Krok 5} - Po vypočítaní zistíme, že:
+    \textbf{Krok 5} - Prvú maticu prenesieme na druhú stranu
+\end{center}
+\begin{gather*}
+    \begin{pmatrix}
+        U_{A} \\
+        U_{B} \\
+        U_{C}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -G_{5} - G_{1} + G_{4} & G_{5} + G_{4} & 0 \\
+        G_{5} + G_{4} & -G_{5} - G_{4} - G_{3} & G_{3} \\
+        0 & G_{3} & -G_{3} - G_{2}
+    \end{pmatrix}^{-1}
+    \times
+    \begin{pmatrix}
+        -I_1-I_{R_{5}} \\
+        -I_2+I_{R_{5}} \\
+        I_2
+    \end{pmatrix}
+\end{gather*}
+
+\begin{center}
+    \textbf{Krok 6} - Po vypočítaní zistíme, že:
 \end{center}
 
 \begin{gather*}
-    U_A = 53.3124V\\
-    U_B = -23.9928V \\
-    U_C = -20.8676V
+    \begin{pmatrix}
+        U_{A} \\
+        U_{B} \\
+        U_{C}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        53.3124 \\
+        -23.9928 \\
+        -20.8676
+    \end{pmatrix} V
 \end{gather*}
 
-Vypočítame $\boldsymbol{U_{R_3}}$ a taktiež $\boldsymbol{I_{R_3}}$:
+\begin{center}
+    \textbf{Krok 7} - Vypočítame $\boldsymbol{U_{R_3}}$ a taktiež $\boldsymbol{I_{R_3}}$:
+\end{center}
+
 \begin{gather*}
     \boldsymbol{U_{R_3}} = U_B - U_C = \textbf{-3.1252V} \\
     \boldsymbol{I_{R_4}} = \frac{U_{R_3}}{R_3} = \textbf{-0.0590A}
